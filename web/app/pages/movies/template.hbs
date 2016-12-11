@@ -1,0 +1,26 @@
+<document>
+   <catalogTemplate theme="light">
+	  <banner>
+		 <title>Movies</title>
+	  </banner>
+	  <list>
+		 <section>
+			<listItemLockup>
+				<title class="scrollTextOnHighlight">All Movies</title>
+				<relatedContent>
+					<grid>
+					<section>
+						{{#each results }}
+						<lockup data-href-page="movie-details" data-href-page-options="{{toJSON this }}">
+							<img class="tile_compact" src="{{{poster_url poster_path }}}"/>
+							<title class="showAndScrollTextOnHighlight">{{ title }}</title>
+						</lockup>
+						{{/each}}
+					</section>
+				  </grid>
+			   </relatedContent>
+			</listItemLockup>
+		 </section>
+	  </list>
+   </catalogTemplate>
+</document>
